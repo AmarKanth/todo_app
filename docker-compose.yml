@@ -4,6 +4,7 @@ services:
     web:
         build:
             context: ./api
+        entrypoint: ["sh", "/app/entrypoint.sh"]
         volumes:
             - ./api:/app
         ports:
