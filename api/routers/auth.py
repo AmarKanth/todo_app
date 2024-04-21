@@ -3,12 +3,13 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel
-from db.models import Users
 from sqlalchemy.orm import Session
-from db.connection import SessionLocal
 from passlib.context import CryptContext
 from starlette import status
 from jose import jwt, JWTError
+
+from db.connection import SessionLocal
+from db.models import Users
 
 
 router = APIRouter(

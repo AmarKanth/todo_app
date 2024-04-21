@@ -1,10 +1,11 @@
 from typing import Annotated
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
-from db.models import Todos
 from starlette import status
 
 from fastapi import APIRouter, Depends, HTTPException, Path
+
+from db.models import Todos
 from db.connection import SessionLocal
 from routers.auth import get_current_user
 

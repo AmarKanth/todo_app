@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+
 from db import models
 from db.connection import engine
 from routers import auth, todos, admin, users

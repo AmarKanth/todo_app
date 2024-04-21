@@ -6,3 +6,5 @@ sqlalchemy
 python-multipart
 psycopg2-binary
 alembic
+httpx
+pytest
