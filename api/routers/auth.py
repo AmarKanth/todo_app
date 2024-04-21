@@ -3,9 +3,9 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel
-from models import Users
+from db.models import Users
 from sqlalchemy.orm import Session
-from database import SessionLocal
+from db.connection import SessionLocal
 from passlib.context import CryptContext
 from starlette import status
 from jose import jwt, JWTError
